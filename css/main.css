@@ -1,150 +1,247 @@
-/***** BASE STYLES *****/
+html {
+    font-size: 16px;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #000000;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
 }
 
 
-/***** GRID *****/
 
-.full-width {
-    width: 1200px;
+.container{
+    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
-.half-width {
-    width: 600px;
-    float: left;
+h1,
+h2,
+h3,
+h4 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+h1 {
+	font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 12px;
 }
 
-.third-width {
-    width: 400px;
-    float: left;
+p {
+	font-size: 14px;
+	line-height: 21px;
+    padding: 0 30px;
 }
 
-.third-width-borders {
-    height: 250px;
-    width: 396px;
-    float: left;
-    border-left: 2px solid #dedbdc;
-    border-right: 2px solid #dedbdc;
+/*The widths are in a percentage!*/
+header {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	width: 100%;
 }
-
-/***** HEADER *****/
 
 header h1 {
-    text-transform: uppercase;
-    font-size: 30px;
-    padding: 30px 0;
+	margin: 0;
+	padding: 18px 0;
+	width: 100%
 }
-
 header h1 span {
-    color: #77a466;
+	color: #77a466;
 }
 
-nav {
-    float: right;
-    padding: 45px 0;
+header nav {
+    padding: 46px 0;
+    width: 100%;
+    border-bottom: 3px solid #77a466;
+}
+header nav ul {
+	margin: 0;
+	padding: 0;
+}
+header nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 10px 10px;
+	list-style: none;
+}
+header nav ul li a{
+	text-decoration: none;
+	color:#77a466;
 }
 
-nav ul {
-    list-style: none;
+/*The widths are in a percentage!*/
+.top-section,
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
-nav ul li {
-    display: inline-block;
+.main-image img {
+	width: 100%;
+	border-bottom: 3px solid #77a466;
 }
 
-nav ul li a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 14px;
-    color: #77a466;
-    padding-left: 20px;
+.main-title {
+	height: auto;
+}
+.main-title h3 {
+	text-align: left;
+	padding: 5px 0;
+	color: #77a466;
+}
+.main-title p {
+	padding: 0;
+	font-size: 16px;
+	line-height: 25px;
 }
 
-/***** HERO *****/
-
-#hero img {
-    border-top: 4px solid #77a466;
-    border-bottom: 4px solid #77a466;
+.section-one,
+.section-two,
+.section-three {
+	width: 100%;
+	height: auto;
+    border-top: 1px solid #eee;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
-/***** ABOUT *****/
-
-#about h2 {
-    color: #77a466;
-    text-transform: uppercase;
-    line-height: 28px;
-    font-size: 18px;
+.section-one h4 {
+	padding: 10px 0;
 }
 
-#about p {
-    font-size: 16px;
-    line-height: 25px;
-    padding: 15px 0;
+.section-one h4,
+.section-two h4,
+.section-three h4 {
+	padding: 10px 30px;
 }
 
-/***** MENU *****/
-
-#menu .full-width {
-    border-top: 2px solid #dedbdc;
-    border-bottom: 2px solid #dedbdc;
-    height: 250px;
+.menu {
+	list-style: none;
+	padding: 0;
+}
+.menu li {
+	padding: 10px 30px;
+	color:#77a466;
 }
 
-#menu .third-width h3, .third-width-borders h3 {
-    padding-top: 30px;
+.reviews {
+	color: #333;
+	font-size: 16px;
+	line-height: 21px;
 }
 
-#menu .third-width.borders {
-    border-left: 2px solid #dedbdc;
-    border-right: 2px solid #dedbdc;
+.address {
+	font-size: 16px;
+	line-height: 24px;
 }
 
-#menu h3 {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 14px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#menu ul {
-    list-style: none;
-    padding-left: 0px;
-}
-
-#menu ul li {
-    line-height: 30px;
-}
-
-#menu ul li a {
-    text-decoration: none;
-    color: #77a466;
-}
-
-#reviews h3, p {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#location h3, p {
-    padding-left: 20px;
-}
-
-
-/***** FOOTER *****/
-
-#footer {
+/*The widths are in a percentage!*/
+footer {
+	border-top: 3px solid #eee;
+	margin: 0 auto;
     text-align: center;
-    font-weight: bold;
-    padding-top: 30px;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer span {
+	font-family: 'Galada', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+	font-size: 14px;
 }
 
-#footer span {
-    color: #77a466;
-    font-family: 'Dancing Script', cursive;
-    text-transform: lowercase;
+
+/* Responsive sizes */
+
+@media all and (min-width:768px) {
+	/* TABLET */
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 0.9em;
+		line-height: 2em;
+	}
+
+	header nav ul li {
+		font-size: 1em;
+		line-height: 2.5em;
+	}
+
+.bottom-section {
+	justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+        padding: 0 10px;
+	}
+
+	.section-two {
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+        padding: 0px 20px 10px 20px;
+    }
+
+	.main-title p {
+		font-size: 1.05em;
+    }
+
+    footer {
+        flex-grow: 1;
+    }
+
+}
+
+@media all and (min-width:1200px) {
+	/* DESKTOP */
+
+	header {
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        flex-flow: row nowrap;
+	}
+
+	header h1 {
+		border: none;
+		text-align: left;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+}
+
 }
